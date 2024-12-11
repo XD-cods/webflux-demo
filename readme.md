@@ -5,6 +5,7 @@
 1. Проект (Project)
     - project_id
     - projectName
+    - description
     - List<Task> tasks (1:N)
     - List<User> teams (N:N) -> project_id | user_id
 
