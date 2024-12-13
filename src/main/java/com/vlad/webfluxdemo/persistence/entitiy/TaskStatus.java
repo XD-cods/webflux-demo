@@ -12,16 +12,12 @@ import org.springframework.data.relational.core.mapping.Table;
 @Setter
 @ToString
 @Builder
-@Table(schema = "public", name = "user")
-public class User {
+@Table(schema = "public", name = "task_status")
+public class TaskStatus {
 
   @Id
-  @Column(value = "user_id")
-  private String id;
+  @Column(value = "status_id")
+  private Long id;
 
-  private String username;
-
-  private String password;
-
-  private Long role;
+  private String statusName;
 }

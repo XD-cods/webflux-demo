@@ -1,7 +1,9 @@
 package com.vlad.webfluxdemo.persistence.entitiy;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
@@ -12,16 +14,13 @@ import org.springframework.data.relational.core.mapping.Table;
 @Setter
 @ToString
 @Builder
-@Table(schema = "public", name = "user")
-public class User {
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(schema = "public", name = "user_role")
+public class UserRole {
   @Id
-  @Column(value = "user_id")
-  private String id;
+  @Column(value = "role_id")
+  private Long id;
 
-  private String username;
-
-  private String password;
-
-  private Long role;
+  private String roleName;
 }
